@@ -4,4 +4,3 @@ spring:
       server:
         git:
           uri: https://github.com/tsfreitas/config-repository.git
-          cloneOnStart: true
