@@ -1,0 +1,10 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka
+
+info:
+  build:
+    name: '@project.name@'
