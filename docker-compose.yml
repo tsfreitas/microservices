@@ -8,3 +8,11 @@ services:
   logging:
    options:
     max-size: "10m"
+ discovery-service:
+  image: discovery-service:latest
+  restart: always
+  ports:
+   - "8761:8761"
+  logging:
+   options:
+    max-size: "10m"
