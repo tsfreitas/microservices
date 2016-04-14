@@ -1,5 +1,6 @@
 config-repository/
 time-api/
+
 .classpath
 .idea/
 .mvn/
@@ -7,3 +8,5 @@ time-api/
 .project
 .settings/
 target/
+
+*.iml
