@@ -8,6 +8,8 @@ services:
   logging:
    options:
     max-size: "10m"
+  links:
+   - discovery-service
  discovery-service:
   image: discovery-service:latest
   restart: always
