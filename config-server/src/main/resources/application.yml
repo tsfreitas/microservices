@@ -4,3 +4,12 @@ spring:
       server:
         git:
           uri: https://github.com/tsfreitas/config-repository.git
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka
+  instance:
+    preferIpAddress: true
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
