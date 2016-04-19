@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      failFast: false
+      discovery:
+        enabled: true
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
+  instance:
+    preferIpAddress: true
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
