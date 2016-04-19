@@ -5,3 +5,5 @@ eureka:
     serviceUrl: http://${eureka.instance.hostname}:${server.port}/eureka/
   instance:
     hostname: localhost
+  server:
+    waitTimeInMsWhenSyncEmpty: 120000
