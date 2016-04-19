@@ -1,5 +1,13 @@
 version: '2'
 services:
+ discovery-service:
+  image: discovery-service:latest
+  restart: always
+  ports:
+   - "8761:8761"
+  logging:
+   options:
+    max-size: "10m"
  config-server:
   image: config-server:latest
   restart: always
@@ -10,11 +18,12 @@ services:
     max-size: "10m"
   links:
    - discovery-service
- discovery-service:
-  image: discovery-service:latest
-  restart: always
+ api-gateway:
+  image: api-gateway:latest
   ports:
-   - "8761:8761"
+   - "8080:8080"
   logging:
    options:
     max-size: "10m"
+  links:
+   - discovery-service
