@@ -4,6 +4,6 @@ eureka:
     fetchRegistry: false
     serviceUrl: http://${eureka.instance.hostname}:${server.port}/eureka/
   instance:
-    hostname: localhost
+    hostname: discovery-service
   server:
-    waitTimeInMsWhenSyncEmpty: 0
+    waitTimeInMsWhenSyncEmpty: 120000
